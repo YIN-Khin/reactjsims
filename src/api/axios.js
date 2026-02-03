@@ -94,7 +94,7 @@ import axios from "axios";
 const API_ORIGIN = process.env.REACT_APP_API_URL || "http://localhost:3001";
 
 const instance = axios.create({
-  baseURL: API_URL,  
+  baseURL: `${API_ORIGIN}`,   // ✅ important
   timeout: 15000,
   headers: { "Content-Type": "application/json" },
 });
